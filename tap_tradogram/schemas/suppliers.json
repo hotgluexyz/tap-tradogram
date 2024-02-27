@@ -1,0 +1,314 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "SupplierCode": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "CompanyName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "CreatedDate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ModifiedDate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "AccountNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Website": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierType": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PhoneNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "FaxNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PostalAddressInfo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PostalAddressCity": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PostalAddressState": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PostalAddressZip": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PostalAddressCountry": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PhysicalAddressInfo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PhysicalAddressCity": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PhysicalAddressState": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PhysicalAddressZip": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PhysicalAddressCountry": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DefaultCurrency": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DefaultPaymentTerms": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DefaultTaxName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DefaultTaxPercentage": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DefaultUseTaxName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DefaultUseTaxPercentage": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "TaxID": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "BankAccountNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "FinancialYearEndDate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "InternalNotes": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierContacts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "SupplierContactCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "Name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "Email": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "PhoneNumber": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "Branch": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "CreatedDate": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ModifiedDate": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "CustomFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Label": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "Value": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "Categories": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "CategoryCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "CategoryName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ParentCategoryCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ParentCategoryName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "SupplierBranches": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "BranchCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "BranchName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "HasAttachments": {
+            "type": [
+                "boolean",
+                "null"
+            ]
+        }
+    }
+}
