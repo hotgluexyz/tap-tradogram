@@ -97,8 +97,9 @@ class TradogramStream(RESTStream):
             params["page"] = next_page_token
 
         if self.replication_key:
-            replication_date = self.get_starting_timestamp(context) + timedelta(seconds=1)
+            replication_date = self.get_starting_timestamp(context)
             if replication_date:
+                replication_date = replication_date + timedelta(seconds=1)
                 params["modifiedDateStart"] = replication_date.strftime(
                     "%Y-%m-%d %H:%M:%S"
                 )
