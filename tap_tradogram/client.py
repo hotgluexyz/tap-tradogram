@@ -6,6 +6,8 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 import requests
+from datetime import timedelta
+
 from singer_sdk.authenticators import APIKeyAuthenticator
 from singer_sdk.helpers.jsonpath import extract_jsonpath
 from singer_sdk.streams import RESTStream
@@ -93,9 +95,14 @@ class TradogramStream(RESTStream):
         params: dict = {}
         if next_page_token:
             params["page"] = next_page_token
-        # if self.replication_key:
-        #     params["sort"] = "asc"
-        #     params["order_by"] = self.replication_key
+
+        if self.replication_key:
+            replication_date = self.get_starting_timestamp(context) + timedelta(seconds=1)
+            if replication_date:
+                params["modifiedDateStart"] = replication_date.strftime(
+                    "%Y-%m-%d %H:%M:%S"
+                )
+
         return params
 
     def prepare_request_payload(

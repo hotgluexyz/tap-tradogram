@@ -15,12 +15,14 @@
             ]
         },
         "CreatedDate": {
+            "format": "date-time",
             "type": [
                 "null",
                 "string"
             ]
         },
         "ModifiedDate": {
+            "format": "date-time",
             "type": [
                 "null",
                 "string"

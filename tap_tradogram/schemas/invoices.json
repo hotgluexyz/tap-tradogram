@@ -1,0 +1,516 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "InvoiceCode": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "InvoiceNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ReferenceNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "InvoiceStatus": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "InvoiceDate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "CreatedDate": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ModifiedDate": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DueDate": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "CreatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ProjectNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "POCode": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PONumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "POName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "BuyerBranchName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Terms": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Notes": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierCode": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierAccountNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierAddress": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierAddressInfo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierAddressCity": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierAddressState": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierAddressZip": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierAddressCountry": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierContactName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "SupplierContactEmail": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Currency": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Subtotal": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DiscountTotal": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Taxes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "TaxName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "TaxRate": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "Type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "TaxTotal": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "FeesTotal": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "Total": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "HiddenCosts": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "LineItems": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "LineItemIndex": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "LineItemCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "POLineItemCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "OriginalItemCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ProjectCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ProjectName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ProjectNumber": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ProjectLineCode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ProjectLineName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ProjectLineNumber": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "DepartmentName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "DepartmentNumber": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "GLAccountName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "GLAccountNumber": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ItemNumber": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ItemName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ItemDescription": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "UOMLabel": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "UOMAmount": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "UOMUnit": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "Qty": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "UnitPrice": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ItemSubtotal": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ItemTaxName": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ItemTaxRate": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "ItemTaxTotal": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "CustomFields": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "Label": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "Value": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "Projects": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ProjectCode": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "ProjectName": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "ProjectNumber": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "ProjectLineCode": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "ProjectLineName": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "ProjectLineNumber": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "SplitQty": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "SplitPercentage": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "SplitValue": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "CustomFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Label": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "Value": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "CreditNotesTotal": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "HasAttachments": {
+            "type": [
+                "boolean",
+                "null"
+            ]
+        }
+    }
+}
