@@ -40,3 +40,13 @@ class InvoicesStream(TradogramStream):
             params["status"] = self.config.get("invoice_status")
 
         return params
+
+
+class SuppliersStream(TradogramStream):
+    name = "purchase_orders"
+    path = "/purchase_orders"
+    records_jsonpath = "$.PurchaseOrders[*]"
+    primary_keys = ["POCode"]
+    replication_key = "ModifiedDate"
+
+    schema_filepath = SCHEMAS_DIR / "purchase_orders.json"
