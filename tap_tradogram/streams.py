@@ -42,7 +42,7 @@ class InvoicesStream(TradogramStream):
         return params
 
 
-class SuppliersStream(TradogramStream):
+class PurchaseOrdersStream(TradogramStream):
     name = "purchase_orders"
     path = "/purchase_orders"
     records_jsonpath = "$.PurchaseOrders[*]"

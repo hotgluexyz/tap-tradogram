@@ -39,6 +39,7 @@ class TapTradogram(Tap):
         return [
             streams.SuppliersStream(self),
             streams.InvoicesStream(self),
+            streams.PurchaseOrdersStream(self),
         ]
 
 
