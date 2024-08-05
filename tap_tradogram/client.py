@@ -96,6 +96,10 @@ class TradogramStream(RESTStream):
         if next_page_token:
             params["page"] = next_page_token
 
+        # Allow filtering by comma separated invoice status e.g. Paid
+        if self.config.get("filter_buyerBranchName"):
+            params["buyerBranchName"] = self.config.get("filter_buyerBranchName")
+
         # if self.replication_key:
         #     replication_date = self.get_starting_timestamp(context)
         #     if replication_date:
