@@ -107,6 +107,8 @@ class TradogramStream(RESTStream):
         #         params["modifiedDateStart"] = replication_date.strftime(
         #             "%Y-%m-%d %H:%M:%S"
         #         )
+        if self.name=="suppliers":
+            params['branchName'] = self.config.get("branch_name","HX Entertainment Limited")
 
         return params
 
