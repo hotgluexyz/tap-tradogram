@@ -27,6 +27,7 @@
             ]
         },
         "InvoiceDate": {
+            "format": "date-time",
             "type": [
                 "null",
                 "string"
@@ -47,6 +48,7 @@
             ]
         },
         "DueDate": {
+            "format": "date-time",
             "type": [
                 "null",
                 "string"
