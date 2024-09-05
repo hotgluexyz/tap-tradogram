@@ -27,6 +27,7 @@
             ]
         },
         "DateApproved": {
+            "format": "date-time",
             "type": [
                 "string",
                 "null"
