@@ -22,6 +22,7 @@ class TradogramStream(RESTStream):
     url_base = "https://api.tradogram.com/v1.0.4"
     records_jsonpath = "$[*]"  # Or override `parse_response`.
     next_page_token_jsonpath = "$.next_page"  # Or override `get_next_page_token`.
+    sync_incremental = False
 
     @property
     def authenticator(self) -> APIKeyAuthenticator:
@@ -100,13 +101,13 @@ class TradogramStream(RESTStream):
         if self.config.get("filter_buyerBranchName"):
             params["buyerBranchName"] = self.config.get("filter_buyerBranchName")
 
-        # if self.replication_key:
-        #     replication_date = self.get_starting_timestamp(context)
-        #     if replication_date:
-        #         replication_date = replication_date + timedelta(seconds=1)
-        #         params["modifiedDateStart"] = replication_date.strftime(
-        #             "%Y-%m-%d %H:%M:%S"
-        #         )
+        if self.replication_key and self.sync_incremental:
+            replication_date = self.get_starting_timestamp(context)
+            if replication_date:
+                replication_date = replication_date + timedelta(seconds=1)
+                params["modifiedDateStart"] = replication_date.strftime(
+                    "%Y-%m-%d %H:%M:%S"
+                )
 
         return params
 

@@ -28,6 +28,10 @@ class InvoicesStream(TradogramStream):
     primary_keys = ["InvoiceCode"]
     replication_key = "ModifiedDate"
 
+    @property
+    def sync_incremental(self):
+        return self.config.get("incremental_transactions") or False
+
     schema_filepath = SCHEMAS_DIR / "invoices.json"
 
     def get_url_params(self, context, next_page_token):
@@ -50,3 +54,7 @@ class PurchaseOrdersStream(TradogramStream):
     replication_key = "ModifiedDate"
 
     schema_filepath = SCHEMAS_DIR / "purchase_orders.json"
+
+    @property
+    def sync_incremental(self):
+        return self.config.get("incremental_transactions") or False
