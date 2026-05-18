@@ -69,7 +69,7 @@ class TradogramStream(RESTStream):
         #       next page. If this is the final page, return "None" to end the
         #       pagination loop.
         payload = response.json()
-        if payload["HasMorePages"]:
+        if "HasMorePages" in payload and payload["HasMorePages"]:
             return payload["Page"] + 1
         return None
 
