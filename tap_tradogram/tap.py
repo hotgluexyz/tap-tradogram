@@ -28,6 +28,18 @@ class TapTradogram(Tap):
             th.DateTimeType,
             description="The earliest record date to sync",
         ),
+        th.Property(
+            "paginate",
+            th.BooleanType,
+            default=True,
+            description="Enable API pagination.",
+        ),
+        th.Property(
+            "page_size",
+            th.IntegerType,
+            default=1000,
+            description="Number of records per page (max 1000).",
+        ),
     ).to_dict()
 
     def discover_streams(self) -> list[streams.TradogramStream]:
