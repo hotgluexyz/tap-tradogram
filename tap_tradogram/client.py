@@ -68,16 +68,10 @@ class TradogramStream(RESTStream):
         # TODO: If pagination is required, return a token which can be used to get the
         #       next page. If this is the final page, return "None" to end the
         #       pagination loop.
-        if self.next_page_token_jsonpath:
-            all_matches = extract_jsonpath(
-                self.next_page_token_jsonpath, response.json()
-            )
-            first_match = next(iter(all_matches), None)
-            next_page_token = first_match
-        else:
-            next_page_token = response.headers.get("X-Next-Page", None)
-
-        return next_page_token
+        payload = response.json()
+        if "HasMorePages" in payload and payload["HasMorePages"]:
+            return payload["Page"] + 1
+        return None
 
     def get_url_params(
         self,
@@ -93,9 +87,11 @@ class TradogramStream(RESTStream):
         Returns:
             A dictionary of URL query parameters.
         """
-        params: dict = {}
-        if next_page_token:
-            params["page"] = next_page_token
+        params: dict = {
+            "paginate": self.config["paginate"],
+            "pageSize": self.config["page_size"],
+            "page": next_page_token or 1,
+        }
 
         # Allow filtering by comma separated invoice status e.g. Paid
         if self.config.get("filter_buyerBranchName"):
